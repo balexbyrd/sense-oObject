@@ -1,0 +1,14 @@
+{
+	"type": "mashup",
+	"name": "oObject.html",
+	"version": "1.0.0",
+	"description": "Basic single page mashup to open a Qlik Sense Object",
+	"homepage": "",
+	"author": "Alex Byrd",
+	"keywords": "qlik-sense, mashup",
+	"license": "",
+	"repository": "",
+	"dependencies": {
+		"qlik-sense": ">=2.1.x"
+	}
+}
