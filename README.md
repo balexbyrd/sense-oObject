@@ -18,6 +18,8 @@ Open any Qlik Sense object in a new browser tab and have the option to export to
 	* **Tooltip** - text that pops up in the tooltip when a user scrolls over the button.
 	* **Tab Name** - what's is shown in the tab name when the new tab is created.
 
+> **Pro Tip:** Create your object in the UI > Find Object ID > Add to master library > Remove visual from UI. Now you could access hidden or large visuals in new tabs! 
+	
 ## Usage
 
 When the button is pressed, the object is opened in a new tab, carrying the current selections with it. Selections in the new tab or the application will pass from one to the other. 
@@ -36,4 +38,4 @@ The exportData method in Qlik Sense is a magical function that I believe still h
 
 MIT
 
-Free to use but keep me on your Christmas list.
+Free to use but keep me on your Christmas list :D
