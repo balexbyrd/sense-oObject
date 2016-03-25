@@ -6,11 +6,11 @@ Open any Qlik Sense object in a new browser tab and have the option to export to
 1. Move oObject.btn and oObject.html to the default extension folder for Qlik Sense
 2. Open Qlik Sense and add oObject.btn extension to a sheet
 3. Configure properties (Object ID, New Window URL, Button Name, Tooltip, Tab Name)
-- Object ID - each object added to a Qlik Sense sheet has an object ID. This object is what shows in the tab that's created
-- New Window URL - if using Qlik Sense Desktop, the URL will be http://localhost:4848/extensions/oObject.html/oObject.html . Replace localhost:4848 if on Qlik Sense server
-- Button Name - the name of the button in the UI
-- Tooltip - text that pops up in the tooltip when a user scrolls over the button.
-- Tab Name - what's is shown in the tab name when the new tab is created.
+* Object ID - each object added to a Qlik Sense sheet has an object ID. This object is what shows in the tab that's created
+* New Window URL - if using Qlik Sense Desktop, the URL will be http://localhost:4848/extensions/oObject.html/oObject.html . Replace localhost:4848 if on Qlik Sense server
+* Button Name - the name of the button in the UI
+* Tooltip - text that pops up in the tooltip when a user scrolls over the button.
+* Tab Name - what's is shown in the tab name when the new tab is created.
 
 ## Usage
 
