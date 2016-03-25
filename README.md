@@ -28,4 +28,6 @@ The exportData method in Qlik Sense is a magical function that I believe still h
 
 ## License
 
+MIT
+
 Free to use but keep me on your Christmas list.
