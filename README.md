@@ -18,7 +18,7 @@ Open any Qlik Sense object in a new browser tab and have the option to export to
 	* **Tooltip** - text that pops up in the tooltip when a user scrolls over the button.
 	* **Tab Name** - what's is shown in the tab name when the new tab is created.
 
-> **Pro Tip:** Create your object in the UI > Find Object ID > Add to master library > Remove visual from UI. Now you could access hidden or large visuals in new tabs! 
+> **Pro Tip:** Create your object in the UI > Find Object ID and add to oObject > Add object to master library > Remove object from UI. Now you can access hidden or large visuals in new tabs! 
 	
 ## Usage
 
