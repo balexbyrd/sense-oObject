@@ -34,6 +34,10 @@ The exportData method in Qlik Sense is a magical function that I believe still h
 
 ### Note: If using Qlik Sense +2.2 you must open up the oObject.html file and comment & uncomment the css and js html script they conveniently changed between the versions. The instructions are (should be) obvious :D
 
+### If using this from Qlik Sense Desktop, you must navigate to the application in a browser http://localhost:4848/hub/ in order for this to work.
+
+### You must allow pop-ups in your browser
+
 ## License
 
 MIT
