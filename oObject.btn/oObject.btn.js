@@ -1,12 +1,8 @@
-function OpenInNewTab(appName, objId, oUrl, tName) {
-  var win = window.open(oUrl, '_blank');
-  win.appName = appName;
-  win.obId = objId;
-  win.tName = tName;
-  win.focus();
-}
+var appName;
+var objId;
+var tName;
 
-define( ['jquery','qlik','./js/tipped','css!./css/tipped.css','css!./css/gtStyle.css'],
+define( ['jquery','js/qlik','./js/tipped','css!./css/tipped.css','css!./css/gtStyle.css'],
 function ($,qlik,tipped) {
 	return {
 		definition: {
@@ -43,34 +39,43 @@ function ($,qlik,tipped) {
 					label: "Tab Name",
 					type: "string",
 					defaultValue: "-Enter a Tab name-"
-				}					
+				},
+				appearance: {
+					uses: "settings"
+				}				
 			}
 		},	
 		paint: function ($element,layout) {
+
 			$element.empty();
 			
+			var ext_height = $element.height()-5;
 			var id = layout.qInfo.qId + '_ext';
-			var $Create = $( '#' + id );			
-			var ext_height = $element.height()-10;
-			var appName = qlik.currApp().id;		// Current App ID
-			var objId = layout.props.oID;			// Object ID to show
+			var $Create = $( '#' + id );						
+			
+			appName = qlik.currApp().id;		// Current App ID
+			objId = layout.props.oID;			// Object ID to show
+			tName = layout.props.tName; 		// Tab name
 			var oUrl = layout.props.oUrl;			// URL to open
 			var bName = layout.props.bName;			// Button Name
 			var tTip = layout.props.tTip; 			// Tooltip
-			var tName = layout.props.tName; 		// Tab name
+			
 			
 			$Create = $( document.createElement( 'div' ) );
 			$Create.attr( 'id', id );			
 			gid = "ot_"+id;				
-			$Create.html( '<button id="'+gid+'" class="button button1" style="height:'+ext_height+'px;" button="submit">'+bName+'</button><p id="ot" class="oTable"></p>' );
+			
+			$Create.html('<button id="'+gid+'" class="bton2 button3" button="submit" style="height:'+ext_height+'px;" >'+bName+'</button>');
 			$element.append( $Create );				 
 
-			tipped.create('#'+gid+'', tTip, { position: 'top',fadeIn: 400,fadeOut: 180, size: 'large',behavior: 'hide'});
+			tipped.create('#'+gid+'', tTip, { position: 'bottomright',fadeIn: 400,fadeOut: 180, size: 'large',behavior: 'hide'});
 			
 			$('#'+gid).on('click', function() {								
-				OpenInNewTab(appName, objId, oUrl, tName);
+				window.open(oUrl, '_blank');
 			});
 		}
 	};
 } );
+
+
 

@@ -5,7 +5,10 @@
 /*
  *    Fill in host and port for Qlik engine
  */
-$('title').html(window.tName);
+
+
+document.title =  window.opener.tName;
+
 var prefix = window.location.pathname.substr( 0, window.location.pathname.toLowerCase().lastIndexOf( "/extensions" ) + 1 );
 
 var config = {
@@ -97,10 +100,9 @@ require( ["js/qlik"], function ( qlik ) {
 
 	//callbacks -- inserted here --
 	//open apps -- inserted here --
-
-	var app = qlik.openApp(window.appName, config);
+	var app = qlik.openApp(window.opener.appName, config);
 	//get objects -- inserted here --	 
-	app.getObject('QV01',window.obId).then( function( vizModel ) {	 
+	app.getObject('QV01',window.opener.objId).then( function( vizModel ) {	 
 		$('#cmdExport').on('click', function() {  
 			$('#cmdExport').css('background','url(icons/loader.gif) no-repeat center');
 			vizModel.exportData().then(function( reply ) {  
