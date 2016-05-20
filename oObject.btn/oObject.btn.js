@@ -16,12 +16,6 @@ function ($,qlik,tipped) {
 					type: "string",
 					defaultValue: "-Enter Object ID-"
 				},
-				oUrl: {
-					ref: "props.oUrl",
-					label: "New Window URL",
-					type: "string",
-					defaultValue: "http://localhost:4848/extensions/oObject.html/oObject.html"
-				},
 				bName: {
 					ref: "props.bName",
 					label: "Button Name",
@@ -56,11 +50,9 @@ function ($,qlik,tipped) {
 			appName = qlik.currApp().id;		// Current App ID
 			objId = layout.props.oID;			// Object ID to show
 			tName = layout.props.tName; 		// Tab name
-			var oUrl = layout.props.oUrl;			// URL to open
 			var bName = layout.props.bName;			// Button Name
 			var tTip = layout.props.tTip; 			// Tooltip
-			
-			
+						
 			$Create = $( document.createElement( 'div' ) );
 			$Create.attr( 'id', id );			
 			gid = "ot_"+id;				
@@ -71,7 +63,7 @@ function ($,qlik,tipped) {
 			tipped.create('#'+gid+'', tTip, { position: 'bottomright',fadeIn: 400,fadeOut: 180, size: 'large',behavior: 'hide'});
 			
 			$('#'+gid).on('click', function() {								
-				window.open(oUrl, '_blank');
+				window.open(location.origin+'/extensions/oObject.html/oObject.html', '_blank');
 			});
 		}
 	};
